@@ -1,8 +1,9 @@
-class Aluno {
-  constructor(ra, nome, nascto) {
-    this.ra = ra;
+class Professor {
+  constructor(id, nome, nascto, profissao) {
+    this.id = id;
     this.nome = nome;
     this.nascto = nascto;
+    this.profissao = profissao;
     this.idade = this.calcidade();
   }
 
@@ -21,4 +22,4 @@ class Aluno {
   }
 }
 
-module.exports = Aluno;
+module.exports = Professor;
