@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./form.js"></script>
+    <title>Cadastro de Alunos</title>
+  </head>
+  <body>
+    <header>
+      <form action="http://localhost:3000/create">
+        <input type="text" name="ra" id="ra" placeholder="Digite o RA: " />
+      <input type="text" name="nome" id="nome" placeholder="Digite o Nome: " />
+      <label for="data">Digite sua data de nascimento: </label>
+      <input
+        type="date"
+        name="nascto"
+        id="nascto"
+        placeholder="Digite a data de nascimento: "
+        id="data"
+        />
+        <input
+        type="number"
+        name="turma"
+        id="turma"
+        placeholder="Digite o id da turma: "
+        />
+        <input type="submit" id="cadastrar" value="Cadastrar"></input>
+      </form>
+    </header>
+    <main id="dados">
+    </main>
+  </body>
+</html>

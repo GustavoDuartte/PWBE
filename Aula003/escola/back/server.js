@@ -1,11 +1,11 @@
-const express = require("express");
+const express = require('express')
 
-const app = express();
-const router = require("./src/routes/routes");
+const router = require('./src/routes/routes')
 
-app.use(express.json());
-app.use("/", router);
+const app = express()
+app.use(express.json())
+app.use('/',router)
 
-app.listen(3000, () => {
-  console.log("Funfando");
-});
+app.listen(3000,()=>{
+    console.log("Respondendo na porta 3000")
+})
