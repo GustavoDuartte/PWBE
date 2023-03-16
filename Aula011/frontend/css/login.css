@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 
 body {
   background-image: url(https://thumbs.dreamstime.com/b/healthcare-medical-concept-medicine-doctor-stethoscope-hand-patients-come-to-hospital-background-179931139.jpg);
@@ -21,7 +21,7 @@ section {
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
 }
-.j{
+.j {
   position: absolute;
   top: 0;
   margin-top: 40px;
@@ -32,9 +32,9 @@ form {
 ul {
   width: 17vw;
 }
-h1{
-  font-family: 'Comfortaa', cursive;
+h1 {
+  font-family: "Comfortaa", cursive;
 }
-span{
+span {
   color: #396dc3;
 }

@@ -1,7 +1,7 @@
 const con = require("../dao/connection");
 
 const cadastrar = (req, res) => {
-    let data = req.body;
+  let data = req.body
 
     const query = `INSERT INTO especialidades VALUES (DEFAULT, '${data.nome}')`;
 
@@ -13,7 +13,7 @@ const cadastrar = (req, res) => {
         }else {
             data.id = result.insertId;
             
-            res.status(201).json(data).end();
+            res.status(201).json({especialidades_id:data.id}).end();
         }
     });
 };

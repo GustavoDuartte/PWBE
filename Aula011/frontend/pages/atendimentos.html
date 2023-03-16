@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/novo.css" />
+    <link rel="stylesheet" href="../css/pacientes.css" />
+
+    <title>Atendimentos</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./home.html">← HOME</a>
+      </div>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary btn-floating btn-lg botao"
+        data-mdb-toggle="modal"
+        data-mdb-target="#myModal"
+      >
+        <i class="fas fa-plus"></i>
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                  <div class="form-outline">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="validationCustom01"
+                      required
+                    />
+                    <label for="validationCustom01" class="form-label"
+                      >Data do Atendimento</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="validationCustom02"
+                      required
+                    />
+                    <label for="validationCustom02" class="form-label"
+                      >ID do Medicco</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="validationCustom03"
+                      required
+                    />
+                    <label for="validationCustom03" class="form-label"
+                      >ID do Paciente</label
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-mdb-dismiss="modal"
+              >
+                Close
+              </button>
+              <a href="./atendimentos.html">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-mdb-dismiss="modal"
+                  onclick="novo()"
+                >
+                  Register
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- editar -->
+
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary botao"
+        data-mdb-toggle="modal"
+        data-mdb-target="#exampleModal"
+      >
+        <i class="fas fa-edit"></i>
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                  <div class="form-outline">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editCustom01"
+                      required
+                    />
+                    <label for="editCustom01" class="form-label"
+                      >ID do Atendimento</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="editCustom02"
+                      required
+                    />
+                    <label for="editCustom02" class="form-label"
+                      >Data do Atendimento</label
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-mdb-dismiss="modal"
+              >
+                Close
+              </button>
+              <a href="./atendimentos.html">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="alterar()"
+                >
+                  Save changes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- excluir -->
+    </nav>
+
+    <main>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Data do atendimento</th>
+            <th>Nome do Médico</th>
+            <th>Nome do Paciente</th>
+          </tr>
+        </thead>
+        <tbody id="corpo"></tbody>
+      </table>
+    </main>
+  </body>
+  <script src="../js/atendimentos.js"></script>
+  <!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+  ></script>
+</html>
