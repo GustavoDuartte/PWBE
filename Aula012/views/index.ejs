@@ -13,10 +13,32 @@
       <h1><%= titulo%></h1>
     </header>
     <main>
+      <div>
+        <form action="/create" method="post">
+          <label for="descricao">Descrição:</label>
+          <textarea
+            name="descricao"
+            id="descricao"
+            cols="30"
+            rows="10"
+            placeholder="Digite a descrição da sua tarefa"
+          ></textarea>
+          <label for="quando">Quando:</label>
+          <% hoje = new Date().toISOString().splice(0,16).replace('T',' ')%>
+          <% console.log(hoje)%>
+          <input
+            type="datetime-local"
+            name="quando"
+            id="quando"
+            value="<%=hoje%>"
+          />
+          <input type="submit" value="Novo">
+        </form>
+      </div>
       <table>
         <thead>
           <tr>
-            <td>id</td>
+            <td>ID</td>
             <td>Descrição</td>
             <td>Quando</td>
             <td>Alterar</td>
@@ -26,14 +48,18 @@
         <tbody>
           <% dados.forEach(t => { %>
           <tr>
-            <td><%=t.id%></td>
+            <td colspan="3"><%=t.id%></td>
             <td><%=t.descricao%></td>
             <td>
               <%=t.quando.toISOString('pt-BR').split('T')[0]%>
               <%=t.quando.toISOString('pt-BR').split('T')[1].slice(0,5)%>
             </td>
-            <td><button>[ * ]</button></td>
-            <td><button>[ - ]</button></td>
+            <td><button class="button">[ * ]</button></td>
+            <td>
+              <form action="/del/<%=t.id%>?_method=DELETE" method="POST">
+                <input type="submit" class="button" value="[ - ]" />
+              </form>
+            </td>
           </tr>
           <%})%>
         </tbody>
