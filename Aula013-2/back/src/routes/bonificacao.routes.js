@@ -4,8 +4,8 @@ const router = express.Router();
 const Funcionariocontroller = require("../controllers/funcionario.controller");
 
 router.post("/create", Funcionariocontroller.createFuncionario);
-router.get("/", Funcionariocontroller.read);
-router.put("/update/:id", Funcionariocontroller.update);
-router.delete("/del/:id", Funcionariocontroller.delet);
+router.get("/read", Funcionariocontroller.read);
+router.put("/update", Funcionariocontroller.update);
+router.delete("/del/:matricula", Funcionariocontroller.delet);
 
 module.exports = router;
