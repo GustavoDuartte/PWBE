@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-image: url(https://doppdolata.adv.br/wp-content/uploads/2020/12/Blog-background-check-uma-solucao-para-reducao-de-riscos-das-empresas-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+.modal-body {
+  padding-top: 50px;
+  background-image: url(https://mercal.pt/wp-content/uploads/2017/02/1-1920-x-1080-consultoria.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 17px;
+  scroll-behavior: smooth;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: aqua;
+}
+
+main .table {
+  box-shadow: #0000003d 0px 3px 8px;
+  padding: 20px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: white;
+}
+.titulo ul {
+  display: flex;
+}
+.titulo li {
+  margin: 30px;
+}
+.modal-corpo ul {
+  display: flex;
+}
+.modal-corpo li {
+  margin: 30px;
+  margin-left: 50px;
+}
+.conteudo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 13px 0px black;
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 0.2rem;
+  }
+  .titulo ul {
+    flex-direction: column;
+  }
+  .modal-corpo ul {
+    flex-direction: column;
+  }
+  .conteudo {
+    flex-direction: row;
+  }
+}

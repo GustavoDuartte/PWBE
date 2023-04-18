@@ -39,9 +39,25 @@ const delet = (req, res) => {
   });
 };
 
+const readNome = (req, res) => {
+  const { nome_completo } = req.query;
+
+  const query = `SELECT * FROM funcionario WHERE nome_completo = '${nome_completo}'`;
+
+  con.query(query, function (err, resp) {
+    if (err) {
+      console.log(err);
+      res.status(400).json(err).end();
+    }
+
+    res.status(200).json(resp).end();
+  });
+};
+
 module.exports = {
   read,
   delet,
   createFuncionario,
   update,
+  readNome,
 };

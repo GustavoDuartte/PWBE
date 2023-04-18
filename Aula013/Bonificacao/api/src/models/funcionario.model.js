@@ -4,13 +4,12 @@ class Funcionario {
     this.nomecompleto = i.nomecompleto;
     this.dataadmissao = i.dataadmissao;
     this.salario = i.salario;
-    this.datapagto = i.datapagto;
     this.desempenho = i.desempenho;
     this.bonificacao = this.calcBonificacao();
   }
 
   create() {
-    return `INSERT INTO funcionario VALUES(DEFAULT,'${this.nomecompleto}', '${this.dataadmissao}', ${this.salario}, '${this.datapagto}', ${this.desempenho},${this.bonificacao})`;
+    return `INSERT INTO funcionario VALUES(DEFAULT,'${this.nomecompleto}', '${this.dataadmissao}', ${this.salario}, ${this.desempenho},${this.bonificacao})`;
   }
 
   read() {
@@ -18,7 +17,7 @@ class Funcionario {
   }
 
   update() {
-    return `UPDATE funcionario SET nome_completo='${this.nomecompleto}', data_admissao = '${this.dataadmissao}', salario = '${this.salario}', data_pagto = '${this.datapagto}', desempenho = '${this.desempenho}', bonificacao = '${this.bonificacao}' WHERE matricula='${this.matricula}'`;
+    return `UPDATE funcionario SET nome_completo='${this.nomecompleto}', data_admissao = '${this.dataadmissao}', salario = '${this.salario}', desempenho = '${this.desempenho}', bonificacao = '${this.bonificacao}' WHERE matricula='${this.matricula}'`;
   }
 
   del() {

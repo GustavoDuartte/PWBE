@@ -10,7 +10,6 @@ CREATE TABLE
     nome_completo VARCHAR(255) NOT NULL,
     data_admissao DATE NOT NULL,
     salario FLOAT NOT NULL,
-    data_pagto DATE,
     desempenho INT NOT NULL,
     bonificacao FLOAT
   );

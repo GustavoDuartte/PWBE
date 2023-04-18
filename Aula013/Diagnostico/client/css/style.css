@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-image: url(https://fernandezayoradental.com/wp-content/uploads/2015/02/ENTRADA.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+main .table-modal {
+  width: 70vw;
+}
+.modal-body {
+  padding-top: 50px;
+  background-image: url(https://santeconsulting.com.br/wp-content/uploads/2022/03/imagem-da-clinica-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 17px;
+  scroll-behavior: smooth;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: aqua;
+}
+
+main .table {
+  box-shadow: #0000003d 0px 3px 8px;
+  padding: 20px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: white;
+}
+.titulo ul {
+  display: flex;
+}
+.titulo li {
+  margin: 30px;
+}
+.modal-corpo ul {
+  display: flex;
+}
+.modal-corpo li {
+  margin: 30px;
+  margin-left: 50px;
+}
+.conteudo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 0.2rem;
+  }
+  main .table-modal {
+    display: flex;
+    flex-direction: column;
+  }
+  .titulo ul {
+    flex-direction: column;
+  }
+  .modal-corpo ul {
+    flex-direction: column;
+  }
+  .conteudo {
+    flex-direction: row;
+  }
+}
